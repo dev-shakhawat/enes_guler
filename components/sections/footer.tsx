@@ -92,8 +92,10 @@ export default function Footer() {
   return (
     <footer
       ref={ref}
-      className="relative z-10 bg-[#1e1f26] rounded-tl-[50px] rounded-tr-[50px] py-20  text-white  overflow-hidden    "
+      className="relative z-10     "
     >
+      <div className="bg-[#1e1f26]  py-20  text-white   ">
+
       <Container>
 
         <div className="grid gap-14 lg:grid-cols-[1fr_2fr]">
@@ -230,6 +232,7 @@ export default function Footer() {
           <p>Copyright © 2026 My Store Powered by Shopify</p>
         </motion.div>
       </Container>
+      </div>
     </footer>
   );
 }

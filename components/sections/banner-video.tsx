@@ -32,13 +32,14 @@ export default function BannerVideo({}: {}) {
     >
       {/* youtube video using iframe */}
       <iframe
-        src="https://www.youtube.com/embed/CBxgZxjdJyk?si=MvlW6iTvW2FyhoCM"
+        src="https://www.youtube.com/embed/CBxgZxjdJyk?autoplay=1&mute=1&playsinline=1&rel=0"
         title="YouTube video player"
         frameBorder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allow="accelerometer; autoplay=1; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerPolicy="strict-origin-when-cross-origin"
         allowFullScreen
-        className="w-full h-auto aspect-video "
+        className="w-full h-[80dvh] aspect-video "
+        
       ></iframe>
 
       <AnimatePresence>

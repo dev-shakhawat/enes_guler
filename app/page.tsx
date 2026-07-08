@@ -1,14 +1,18 @@
 import AnnouncementBar from "@/components/common/anouncement-bar";
 import { Container } from "@/components/common/container";
-import { Nav } from "@/components/common/nav"; 
+import { Nav } from "@/components/common/nav";
 import TextReveal from "@/components/common/text-reveal";
 import AccordianSection from "@/components/sections/accordian-section";
 import BannerVideo from "@/components/sections/banner-video";
+import CategoriesSection from "@/components/sections/categories";
 import FashionCollection from "@/components/sections/fashion-collection";
 import Footer from "@/components/sections/footer";
+import ImageMarquee from "@/components/sections/marque";
 import NewStyle from "@/components/sections/new-style";
+import Newsletter from "@/components/sections/newsletter";
 import ShowcasePage from "@/components/sections/perfect-comfrotable";
 import { ProductBanner } from "@/components/sections/product-banner";
+import Testimonial from "@/components/sections/testimonial";
 
 
 export default function Home() {
@@ -31,16 +35,23 @@ export default function Home() {
         />
       </Container>
 
-      
 
-      <BannerVideo/>
 
+      <BannerVideo />
+
+      <CategoriesSection />
+
+      <ImageMarquee />
       <FashionCollection />
-      <ShowcasePage/>
+      <ShowcasePage />
 
       <NewStyle />
+      <Testimonial />
 
-      <Footer/>
+
+      <Newsletter />
+
+      <Footer />
     </section>
   );
 }
