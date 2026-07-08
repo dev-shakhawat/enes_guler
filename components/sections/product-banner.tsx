@@ -59,7 +59,7 @@ export function ProductBanner() {
   ];
 
 return (
-  <div className="bg-black/5">
+  <div className="bg-black/5" id="Product_show"   >
     <Container>
       <div className="relative bg-white flex flex-col lg:block">
         <ProductSlider

@@ -1,8 +1,8 @@
 "use client";
 
-import { useLayoutEffect, useRef } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollTrigger } from "gsap/ScrollTrigger"; 
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -20,7 +20,7 @@ export default function TextReveal({
   overlap = 0.5,
 }: Props) {
   const wrapperRef = useRef<HTMLDivElement>(null);
-  const overlayRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const overlayRefs = useRef<(HTMLDivElement | null)[]>([]); 
 
   useLayoutEffect(() => {
     if (!wrapperRef.current) return;
@@ -46,11 +46,9 @@ export default function TextReveal({
         {
           clipPath: "inset(0 0% 0 0)",
           ease: "none",
-          duration: 1, // relative unit, timeline normalize kore dibe
+          duration: 1,
         },
-        // eita hocche overlap-er magic:
-        // proti line-er start position = previous line-er (1 - overlap) point e
-        i === 0 ? 0 : `-=${overlap}`
+        i === 0 ? 0 : `-=${overlap}`,
       );
     });
 
@@ -60,24 +58,28 @@ export default function TextReveal({
     };
   }, [overlap]);
 
-  return (
-    <div ref={wrapperRef} className={`relative ${className}`}>
-      {lines.map((line, i) => (
-        <div key={i} className={`relative ${lineClassName}`}>
-          {/* Base line */}
-          <div className="text-neutral-300">{line}</div>
 
-          {/* Reveal overlay */}
-          <div
-            ref={(el) => {
-              overlayRefs.current[i] = el;
-            }}
-            className="absolute inset-0 text-[#000000] pointer-events-none"
-          >
-            {line}
+
+  return (
+    <div className="">
+      <div ref={wrapperRef} className={`relative ${className}`}>
+        {lines.map((line, i) => (
+          <div key={i} className={`relative ${lineClassName}`}>
+            {/* Base line */}
+            <div className="text-neutral-300">{line}</div>
+
+            {/* Reveal overlay */}
+            <div
+              ref={(el) => {
+                overlayRefs.current[i] = el;
+              }}
+              className="absolute inset-0 text-[#000000] pointer-events-none"
+            >
+              {line}
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 }

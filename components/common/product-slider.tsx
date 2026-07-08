@@ -61,7 +61,7 @@ export function ProductSlider({ allProDucts, setCurrentSlide }: { allProDucts: T
           </div>
         ))}
         {loaded && instanceRef.current ? (
-          <div className="flex gap-2  absolute bottom-10  left-0  ">
+          <div className="flex gap-2  absolute bottom-10  left-5  ">
             <ArrowBtn
               onClick={(e: React.MouseEvent<HTMLElement>) => {
                 e.stopPropagation();

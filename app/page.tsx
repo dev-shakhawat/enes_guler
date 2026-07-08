@@ -1,14 +1,15 @@
 import AnnouncementBar from "@/components/common/anouncement-bar";
 import { Container } from "@/components/common/container";
-import { Nav } from "@/components/common/nav";
+import { Nav } from "@/components/common/nav"; 
 import TextReveal from "@/components/common/text-reveal";
 import AccordianSection from "@/components/sections/accordian-section";
+import BannerVideo from "@/components/sections/banner-video";
 import FashionCollection from "@/components/sections/fashion-collection";
 import Footer from "@/components/sections/footer";
 import NewStyle from "@/components/sections/new-style";
 import ShowcasePage from "@/components/sections/perfect-comfrotable";
 import { ProductBanner } from "@/components/sections/product-banner";
-import Image from "next/image";
+
 
 export default function Home() {
   return (
@@ -29,6 +30,10 @@ export default function Home() {
           ]}
         />
       </Container>
+
+      
+
+      <BannerVideo/>
 
       <FashionCollection />
       <ShowcasePage/>
