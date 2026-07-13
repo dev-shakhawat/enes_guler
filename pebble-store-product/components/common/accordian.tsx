@@ -3,24 +3,21 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { IoIosArrowForward } from "react-icons/io";
+import { TAccordionProps } from "@/types";
 
-type AccordionProps = {
-  title: string;
-  icon?: React.ReactNode;
-  children: React.ReactNode;
-  defaultOpen?: boolean;
-};
+
 
 export default function Accordion({
   title,
   icon,
   children,
   defaultOpen = false,
-}: AccordionProps) {
+  className ,
+}: TAccordionProps) {
   const [isOpen, setIsOpen] = useState(defaultOpen);
 
   return (
-    <div className="border-b border-neutral-200">
+    <div className={`border-b border-neutral-200 ${className || ""}`}>
       <button
         onClick={() => setIsOpen((prev) => !prev)}
         className="flex w-full items-center justify-between py-5 text-left"

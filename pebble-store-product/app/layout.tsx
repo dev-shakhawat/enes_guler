@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Bricolage_Grotesque } from "next/font/google";
 import "./globals.css"; 
 import Nav from "@/components/common/nav";
+import Footer from "@/components/sections/footer";
 
 const bricolageGrotesque = Bricolage_Grotesque({
   variable: "--font-bricolage-grotesque",
@@ -27,7 +28,8 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col"> 
         <Nav/>
-        {children}
+        {children} 
+        <Footer/>
       </body>
     </html>
   );

@@ -14,7 +14,7 @@
 
 
   /* animations */
-  --animate-marquee: marquee .10s linear infinite;
+  --animate-marquee: marquee .80s linear infinite;
 }
 
 @media (prefers-color-scheme: dark) {

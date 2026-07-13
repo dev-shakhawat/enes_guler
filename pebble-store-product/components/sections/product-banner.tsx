@@ -13,7 +13,7 @@ export default function ProductBanner({}: {}) {
 
   return (
 <Container>
-  <div className="mt-10 grid items-start gap-12 md:grid-cols-2 pb-20   ">
+  <div className="mt-10 grid items-start gap-4 md:gap-8 lg:gap-12 md:grid-cols-2 pb-10 md:pb-16 lg:pb-20   ">
     <div className="sticky top-22 self-start">
       <ImageZoomViewer
         imageSrc={productInfo.image.src}

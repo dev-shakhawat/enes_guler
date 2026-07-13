@@ -49,7 +49,7 @@ export default function ProductInfo({
   ];
 
   return (
-    <div className="w-full ml-16 ">
+    <div className="w-full relative z-2 bg-white lg:ml-16  ">
       {/* Breadcrumb */}
       <div className="mb-4 flex items-center gap-3 text-sm text-neutral-500">
         <span className="cursor-pointer hover:text-black transition-colors">

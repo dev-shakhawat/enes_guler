@@ -85,7 +85,7 @@ export default function ImageZoomViewer({
     <div className={`relative overflow-hidden rounded-xl ${className}`}>
       <div
         ref={viewerRef}
-        className="relative h-125 w-full bg-black"
+        className="relative h-100 md:h-125 w-full bg-black/2 "
       />
 
       <div className="absolute bottom-3 right-3 z-20 flex gap-2">

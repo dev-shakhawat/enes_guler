@@ -8,9 +8,9 @@ import { PiUmbrellaSimple } from "react-icons/pi";
 export default function ProductDetails() {
   return (
     <Container>
-      <div className="py-24">
-        <div className="grid gap-16 md:grid-cols-[580px_1fr]">
-          <div>
+      <div className=" py-6 md:py-16 lg:py-24">
+        <div className="grid gap-16 items-start md:grid-cols-[580px_1fr]">
+          <div className="sticky top-24   ">
             <p className="text-sm font-semibold uppercase tracking-wider text-neutral-900">
               Style & Comfort
             </p>
@@ -24,7 +24,7 @@ export default function ProductDetails() {
             </h2>
           </div>
 
-          <div>
+          <div className="bg-white relative z-2  ">
             <Accordion
               defaultOpen
               title="Specific Features"
