@@ -1,15 +1,24 @@
-import { Geist, Geist_Mono, Inter } from "next/font/google"
+import { Bricolage_Grotesque , Poppins } from "next/font/google";
 
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utils"; 
+import Nav from "@/components/common/nav";
+import ScrollingPromotionTop from "@/components/common/scrolling-promotion";
+import Footer from "@/components/sections/footer";
 
-const inter = Inter({subsets:['latin'],variable:'--font-sans'})
-
-const fontMono = Geist_Mono({
+const bricolageGrotesque = Bricolage_Grotesque({
+  variable: "--font-bricolage-grotesque",
   subsets: ["latin"],
-  variable: "--font-mono",
+});
+
+
+const poppins = Poppins({
+  variable: "--font-poppins",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800", "900"],
 })
+
 
 export default function RootLayout({
   children,
@@ -20,10 +29,15 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={cn("antialiased", fontMono.variable, "font-sans", inter.variable)}
+      className={cn("antialiased", bricolageGrotesque.variable, poppins.variable)}
     >
-      <body>
-        <ThemeProvider>{children}</ThemeProvider>
+      <body cz-shortcut-listen="true" >
+        <ThemeProvider>
+          <ScrollingPromotionTop/>
+          <Nav/>
+          {children}
+          <Footer/>
+        </ThemeProvider>
       </body>
     </html>
   )
