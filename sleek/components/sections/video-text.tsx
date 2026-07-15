@@ -1,12 +1,10 @@
-import Image from "next/image"
-import Container from "../common/container"
-import papain from "@/public/images/papain.webp"
+import Container from "../common/container" 
 
 export default function VideoWithText({}: {}) {
   return (
     <section className="mt-20">
       <Container>
-        <div className="grid max-h-100 grid-cols-1 overflow-hidden rounded-2xl md:grid-cols-2">
+        <div className="grid md:max-h-100 grid-cols-1 overflow-hidden rounded-2xl md:grid-cols-2">
           {/* image */}
           <div className="overflow-hidden">
             <iframe
@@ -20,7 +18,7 @@ export default function VideoWithText({}: {}) {
           </div>
 
           {/* text */}
-          <div className="flex h-full flex-col justify-center bg-[#F0EEEF] px-23 text-center">
+          <div className="flex h-full flex-col justify-center bg-[#F0EEEF] p-5 md:px-15 lg:px-23 text-center">
             <p className="font-brico">Safety Ingredients</p>
             <h3 className="my-4 font-poppins text-2xl font-semibold">
               Why we stand behind it

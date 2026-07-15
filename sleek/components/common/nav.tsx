@@ -35,7 +35,7 @@ export default function Nav({}: {}) {
 
   return (
     <nav
-      className={`border-b border-secondary py-7 ${isSticky ? "sticky top-0 z-10 bg-white shadow" : ""} `}
+      className={`border-b border-secondary py-7 ${isSticky ? "sticky top-0 z-100 bg-white shadow" : ""} `}
     >
       <Container>
         <div className="flex items-center justify-between">

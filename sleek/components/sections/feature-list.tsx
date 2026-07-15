@@ -35,7 +35,7 @@ export default function FeatureList({}: {}) {
   return (
     <section className="mt-20">
       <Container>
-        <div className="flex items-center gap-4 justify-center   ">
+        <div className="flex items-center flex-wrap gap-4 justify-center   ">
           {features.map((f, i) => (
             <Button
               key={i}

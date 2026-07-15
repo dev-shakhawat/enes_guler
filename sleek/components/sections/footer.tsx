@@ -4,6 +4,7 @@ import { BsTiktok, BsYoutube } from "react-icons/bs"
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa"
 import Container from "../common/container"
 import { PiPinterestLogo } from "react-icons/pi"
+import Accordion from "../common/accordion"
 
 type FooterLink = {
   label: string
@@ -100,8 +101,30 @@ export default function Footer() {
           {/* Customer care */}
           <FooterColumnBlock column={customerCareLinks} />
 
+          <div className="md:hidden">
+            <Accordion title="Shop">
+              <p className="">Search</p>
+            </Accordion>
+            <Accordion title="Customer care">
+              <p className="">Search</p>
+            </Accordion>
+            <Accordion title="About">
+              <p className="mt-3 max-w-xs text-sm leading-relaxed text-slate-600">
+                We only carry designs we believe in ethically and aesthetically —
+                original, authentic pieces that are made to last.
+              </p>
+              <Link
+                href="/about"
+                className="mt-2 inline-block border-b border-slate-900 text-sm font-medium text-slate-900 hover:opacity-70"
+              >
+                Learn More
+              </Link>
+            </Accordion>
+
+          </div>
+
           {/* About */}
-          <div>
+          <div className="hidden md:block ">
             <h4 className="text-base font-medium text-slate-900">About</h4>
             <p className="mt-3 max-w-xs text-sm leading-relaxed text-slate-600">
               We only carry designs we believe in ethically and aesthetically —
@@ -153,7 +176,7 @@ export default function Footer() {
 
 function FooterColumnBlock({ column }: { column: FooterColumn }) {
   return (
-    <div>
+    <div className="hidden md:block">
       <h4 className="text-base font-medium text-slate-900">{column.title}</h4>
       <ul className="mt-3 space-y-2">
         {column.links.map((link) => (

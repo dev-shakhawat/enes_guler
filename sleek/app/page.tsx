@@ -1,5 +1,6 @@
 import { BreadcrumbSection } from "@/components/sections/breadcrumb"
 import CollapsibleFaq from "@/components/sections/collapsible-faq"
+import { Collection } from "@/components/sections/collections"
 import FeatureList from "@/components/sections/feature-list"
 import ImageWithText from "@/components/sections/image-text"
 import MultiColumn from "@/components/sections/munti-colimn"
@@ -13,6 +14,8 @@ import { Button } from "@/components/ui/button"
 export default function Page() {
   return (
     <main  className="">
+
+      
        
        {/* bread crumb  */}
        <BreadcrumbSection/>
@@ -24,7 +27,7 @@ export default function Page() {
        <Testimonial/>
 
        {/* feature list */}
-       {/* <FeatureList/> */}
+       <FeatureList/>
 
        {/* rich text */}
        <RichText/>
@@ -34,6 +37,9 @@ export default function Page() {
 
        {/* multi column */}
        <MultiColumn/>
+
+       {/* collections */}
+       <Collection/>
 
        {/* collapsible faq */}
        <CollapsibleFaq/>

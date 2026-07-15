@@ -33,12 +33,12 @@ export default function Testimonial({}: {}) {
   })
 
   return (
-    <section className="bg-[#F3EEEA] py-20 mt-10 ">
+    <section className="bg-[#F3EEEA] py-5 md:py-10 lg:py-15 xl:py-20 mt-10 ">
       <Container>
         <div className="flex items-center justify-between">
-          <h2 className="text-2xl font-medium ">Over 2,000 Happy reviews</h2>
+          <h2 className="lg:text-2xl text-xl font-medium ">Over 2,000 Happy reviews</h2>
 
-          <div className="flex gap-4 ">
+          <div className="hidden md:flex gap-4 ">
             {/* left btn */}
             <CmnButton
             onClick={() => instanceRef.current?.prev()}
@@ -51,7 +51,7 @@ export default function Testimonial({}: {}) {
           </div>
         </div>
 
-        <div ref={ref} className="keen-slider mt-10   ">
+        <div ref={ref} className="keen-slider lg:mt-10 mt-5   ">
           {testimonials.map((t, i) => (
             <TestimonialCard className={`keen-slider__slide`} key={i} {...t} />
           ))}

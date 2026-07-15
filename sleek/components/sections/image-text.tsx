@@ -4,11 +4,11 @@ import papain from "@/public/images/papain.webp"
 
 export default function ImageWithText({}: {}) {
   return (
-    <section className="mt-20">
+    <section className="mt-10 md:mt-20">
       <Container>
-        <div className="grid grid-cols-1 rounded-2xl md:grid-cols-2 max-h-100 overflow-hidden  ">
+        <div className=" flex flex-col-reverse md:grid grid-cols-1 rounded-2xl md:grid-cols-2 md:max-h-100 overflow-hidden  ">
           {/* text */}
-          <div className="bg-[#F0EEEF] px-23 text-center flex flex-col justify-center h-full      ">
+          <div className="bg-[#F0EEEF] p-5 md:px-23 md:text-center flex flex-col justify-center h-full      ">
             <p className="  font-brico">Safety Ingredients</p>
             <h3 className="font-poppins text-2xl font-semibold my-4 ">
               A fruit enzyme that helps exfoliate and soften skin

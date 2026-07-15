@@ -53,12 +53,12 @@ export default function ProductBanner({}: {}) {
       <Container>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
           {/* image viewer */}
-          <div className="sticky self-start top-30  ">
+          <div className="md:sticky self-start top-30  ">
             <ImageZoomer imageSrc={productBannerImage.src} />
           </div>
 
           {/* product info */}
-          <div className="ml-20">
+          <div className="md:ml-20   ">
             <h2 className="font-brico text-2xl font-bold">
               North Star Valerio Basic Slip-On Sneaker For Men
             </h2>

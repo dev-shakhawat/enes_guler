@@ -30,6 +30,7 @@ export default function RootLayout({
       lang="en"
       suppressHydrationWarning
       className={cn("antialiased", bricolageGrotesque.variable, poppins.variable)}
+      
     >
       <body cz-shortcut-listen="true" >
         <ThemeProvider>

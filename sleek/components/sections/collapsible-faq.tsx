@@ -1,35 +1,33 @@
 import Accordion from "../common/accordion";
 import Container from "../common/container";
 
- 
 
-export default function CollapsibleFaq({}: {}) {
+
+export default function CollapsibleFaq({ }: {}) {
   return (
-    <section className="py-20 ">
-        <Container>
+    <section className="pt-25 pb-15 md:py-20!  ">
+      <Container>
 
-            <h2 className="font-poppins text-4xl font-medium text-center mb-10   ">
-                Questions check here
-            </h2>
+        <h2 className="font-poppins text-2xl md:text-4xl font-medium text-center mb-10 mt-5 md:mt-0   ">
+          Questions check here
+        </h2>
 
-            <div className="px-50">
-                {faqItems.map((q,i)=> (
-                    <Accordion title={q.question} key={i}> 
-                        <p className="text-muted-foreground">{q.answer}</p>
-                    </Accordion>
-                ))}
-
-
-            </div>
+        <div className="px-0 md:px-25 lg:px-50">
+          {faqItems.map((q, i) => (
+            <Accordion title={q.question} key={i}>
+              <p className="text-muted-foreground">{q.answer}</p>
+            </Accordion>
+          ))}
+        </div>
 
 
-        </Container> 
+      </Container>
     </section>
   )
 }
 
 
-const faqItems : { question: string; answer: string }[] = [
+const faqItems: { question: string; answer: string }[] = [
   {
     question: "How long does shipping take?",
     answer: "Shipping typically takes 5-7 business days within the United States. For international orders, shipping can take 10-15 business days, depending on the destination and customs processing times. You will receive a tracking number once your order has shipped so you can monitor its progress."
