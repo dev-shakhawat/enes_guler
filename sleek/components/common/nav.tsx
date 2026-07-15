@@ -10,6 +10,7 @@ import { AuthModal } from "../auth/auth"
 import { useMotionValueEvent, useScroll } from "framer-motion"
 import { useState } from "react"
 import { LuMenu } from "react-icons/lu";
+import { MobileNav } from "./mobile-nav"
 
 export default function Nav({}: {}) {
   const navLinks: TNavLink[] = [
@@ -35,7 +36,7 @@ export default function Nav({}: {}) {
 
   return (
     <nav
-      className={`border-b border-secondary py-7 ${isSticky ? "sticky top-0 z-100 bg-white shadow" : ""} `}
+      className={`border-b border-secondary py-3 md:py-7 ${isSticky ? "sticky top-0 z-100 bg-white shadow" : ""} `}
     >
       <Container>
         <div className="flex items-center justify-between">
@@ -43,8 +44,8 @@ export default function Nav({}: {}) {
           <div className="hidden sm:block">
             <Logo />
           </div>
-          <div className="sm:hidden">
-            <LuMenu size={24} />
+          <div className="sm:hidden flex items-center ">
+            <MobileNav  />
           </div>
 
           {/* nav Links */}
@@ -65,7 +66,7 @@ export default function Nav({}: {}) {
           </div>
 
           {/* search/user/cart */}
-          <div className="flex gap-5">
+          <div className="flex items-center gap-3 md:gap-5">
             <SearchBox />
             <AuthModal />
             <CardBox />

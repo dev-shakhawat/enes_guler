@@ -49,7 +49,7 @@ export default function ProductBanner({}: {}) {
   ]
 
   return (
-    <section className="mt-5">
+    <section className="md:mt-5">
       <Container>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
           {/* image viewer */}

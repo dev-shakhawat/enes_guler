@@ -26,7 +26,7 @@ export function SearchBox() {
         <IoSearchOutline size={24} />
       </DrawerTrigger>
       <DrawerContent
-        className={`w-full rounded-none! sm:w-3/5 md:rounded-lg lg:w-2/6`}
+        className={`w-full rounded-none! sm:w-3/5 md:rounded-lg lg:w-2/6  z-999! `}
       >
         <DrawerHeader className="flex-row items-center justify-between">
           <DrawerTitle className="text-xl text-foreground md:text-2xl">

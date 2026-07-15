@@ -23,7 +23,7 @@ import {
   DrawerTrigger,
 } from "@/components/ui/drawer" 
 import { useMediaQuery } from "@/hooks/use-media-query"
-import { AiOutlineUser } from "react-icons/ai"
+import { LuUserRound } from "react-icons/lu";
 import AnimatedInput from "../common/animated-input"
 import CheckBox from "../common/check-box"
 import CmnButton from "../common/cmn-button"
@@ -38,7 +38,7 @@ export function AuthModal() {
     return (
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogTrigger>
-          <AiOutlineUser size={24}  />
+          <LuUserRound  size={24}  />
         </DialogTrigger>
         <DialogContent className="sm:max-w-106.25">
           <DialogHeader>
@@ -54,7 +54,7 @@ export function AuthModal() {
   return (
     <Drawer open={open} onOpenChange={setOpen}>
       <DrawerTrigger>
-        <AiOutlineUser />
+        <LuUserRound size={24} />
       </DrawerTrigger>
       <DrawerContent>
         <DrawerHeader className="text-left">
