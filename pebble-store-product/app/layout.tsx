@@ -4,9 +4,7 @@ import "./globals.css";
 import Nav from "@/components/common/nav";
 import Footer from "@/components/sections/footer";
 import LenisProvider from "@/components/common/lenis-provider";
-
-const bricolageGrotesque = Bricolage_Grotesque({
-  variable: "--font-bricolage-grotesque",
+ 
 const bricolageGrotesque = Bricolage_Grotesque({
   variable: "--font-bricolage-grotesque",
   subsets: ["latin"],
@@ -28,8 +26,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${bricolageGrotesque.variable}  h-full antialiased`}
-      className={`${bricolageGrotesque.variable}  h-full antialiased`}
+      className={`${bricolageGrotesque.variable}  h-full antialiased`} 
     >
       <body className="min-h-full flex flex-col" suppressHydrationWarning> 
         <LenisProvider>
